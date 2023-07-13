@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head><style>.hidden {
+    display: none;
+  }
+  #upload {
+        display: none;
+      }
+
+      #upload-label {
+        
+        padding: 10px;
+        padding-left: 150px;
+        font-size: 20px;
+        background-color:cyan;
+        color:blueviolet;
+        cursor: pointer;
+        border-radius: 5px;
+        position: relative;
+        top: 100px;
+        display: flex;
+        justify-self:center;
+        text-align: center;
+      }
+
+      #file-name {
+        margin-top: 10px;
+      }
+      strong{
+    font-size: 150px;
+}
+body{
+    background-image: url(intern.jpeg);
+    background-size:auto;
+    background-repeat: no-repeat;
+}
+#full{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    position: relative;
+    top: 130px;
+    position: relative;
+    top: 50px;
+}
+.qwerty{
+    border: 5px solid teal;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    animation-name: main;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    position: relative;
+    left: 150px;
+    color: azure;
+    padding: 5px;
+
+    
+}
+@keyframes main {
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+h2{
+    position: relative;
+    top: 5px;
+    text-align: center;
+}
+#composeButton{
+        width: fit-content;
+        height: fit-content;
+        font-size: 30px;
+        background-color:lightblue;
+        border-radius: 20px;
+        animation-name: com;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode:both;
+        animation-iteration-count:1;
+        position: relative;
+        left: 300px;
+        bottom: 80px;  
+}
+
+@keyframes com {
+    0%{
+        transform: translatey(-500px);
+    }
+    25%{
+        transform: translatey(50px);
+    }
+    50%{
+        transform: translatey(0px);
+    }
+    100%{
+        transform: translatey(30px);
+    }
+}
+#composeBox{
+    border: 3px solid teal;
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+   
+   animation-name: box;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+   animation-iteration-count: 1;
+   color: azure;
+}
+@keyframes box{
+    0%{
+        transform: translateY(-500px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+h1{
+    text-align: center;
+    font-size: 90px;
+    color: aliceblue;
+    text-decoration:solid;
+    position: relative;
+    top: -5px;
+}
+#hand{
+    font-size: 40px;
+    position: relative;
+    bottom:50px;
+    left:150px;
+    animation-name:hande;
+        animation-duration: 0.5s;
+        animation-delay: 1s;
+        animation-fill-mode:both;
+        animation-iteration-count:4;
+        animation-timing-function:ease-in;
+        animation: none;
+        
+    
+
+}
+@keyframes hande{
+    0%{
+        transform: translatey(0px);
+    }
+    50%{
+        transform: translatey(100px);
+        font-size: 130px;
+    }
+    100%{
+        transform: translatey(0px);
+        font-size: 100px;
+    }
+    
+}
+@media (max-width: 768px) {
+    #full {
+      flex-direction: column;
+      justify-content: center;
+        flex-wrap: wrap;
+    }
+    .head{
+        flex-direction: column;
+    }
+  }img{
+    border-radius: 25px;
+    position: relative;
+    left: 150px;
+    
+  }
+  input[type=text],input[type=email],textarea{
+    background-color: beige;
+    border-radius: 20px;
+    border: 2px solid darkolivegreen;
+    padding: 5px;
+  }
+  .tables{
+    border: 2px solid greenyellow;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px;
+    color: blueviolet;
+   
+    margin:380px;
+  }
+  th,td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .head{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    animation-name: head;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+    animation-fill-mode: forwards;
+  }
+  @keyframes head {
+    0%{
+        opacity: 0.01;
+    }
+    100%{
+        opacity: 1;
+    }
+  }
+  #hash{
+    
+    position: relative;
+    bottom: 130px;
+    background-size: 2000px;
+  }
+  #shead{
+    background-image: linear-gradient(to right,skyblue,hotpink,green);
+  }
+  </style>
+<body><div class="head"><img src="icon.jpeg" alt="image" height="200px" width="200px"><h2 style="font-size: 40px;color: aliceblue;position: relative;top: 4px;left: 200px;">EXPOSYS DATA LABS</h2></div>
+  <h1><strong style="font-size: 150px;">M</strong>ass - <strong>M</strong>ail <strong>D</strong>ispatcher</h1>
+<div id="full">
+    
+    <section class="qwerty"><br>
+        <label for="upload"><h2><span style="font-size: 50px;">Upload Your File Below</span><br> <sub>[In CSV Format]</sub></h2></label>
+        <input type="file" id="upload" accept="text/csv"  onchange="displayFileNameAndScroll(event)">
+        <label for="upload" id="upload-label">Choose File</label>
+        <span id="file-name" style="background-color: rgb(172, 215, 69);color: rgb(140, 20, 220);"></span><span id="hand">&#128071;</span></section>
+        <button id="composeButton">Compose Mail</button><br>
+    <div id="composeBox" class="hidden">
+        <form id="mass" onclick="sendMail();reset();return false;">
+            <label for="mailid">From Email</label>
+          <input style="width: 300px;height: 30px;" type="email" id="mailid" placeholder="From Email"><br>
+          <label for="subject">Subject</label>  
+          <input type="text" id="subject" placeholder="Subject" style="height: 30px;width: 300px;"><br>
+          <label for="body">Body</label>  
+          <textarea id="body" placeholder="Body" rows="10" cols="30" style="width: 300px;"></textarea>
+        <button id="sendButton" style="font-size: 30px;border-radius: 10px;background-color:aliceblue;border-radius: 6px;">Send</button></form>
+    </div>
+</div> <h2 id="shead" style="font-size: 100px;color: tomato;position: relative;top: 100px;background-color: beige;">Emails After Validation</h2> <div id="hash">
+    <div class="tables" id="hash">
+      <div class="valTab">
+        <table id="val">
+          <tr>
+            <td>
+              <h2>Valid Mails: <span id="valCount"></span></h2>
+            </td>
+          </tr>
+        </table>
+      </div> 
+      <div class="invalTab">
+        <table id="inval">
+          <tr>
+            <td>
+              <h2>Invalid Mails: <span id="invalCount"></span></h2>
+           </td>
+          </tr>
+        </table>
+      </div>
+    </div></div>
+    
+    <script>
+      document.getElementById('composeButton').addEventListener('click', function() {
+        toggleComposeBox();
+      });
+  
+      function toggleComposeBox() {
+        var composeBox = document.getElementById('composeBox');
+        composeBox.classList.toggle('hidden');
+      }
+  
+      function displayFileNameAndScroll(event) {
+        let file = event.target.files[0];
+        let fileNameDisplay = document.getElementById('file-name');
+        fileNameDisplay.textContent = file ? file.name : '';
+  
+        // Scroll to the table
+        let tableElement = document.getElementById('shead');
+        tableElement.scrollIntoView({ behavior: 'smooth' });
+      }
+      /* Email validation */
+let upload = document.getElementById('upload');
+
+upload.addEventListener('change', () => {
+  let fr = new FileReader();
+
+  fr.readAsText(upload.files[0]);
+
+  fr.onload = function() {
+    let a = fr.result.split(/\r?\n|\n/).map(e => {
+      return e.split(',');
+    });
+    let valNo = 0;
+    let invalNo = 0;
+    let valMail = [];
+    let invalMail = [];
+
+    a.forEach(e => {
+      let em = String(e);
+      let m = e.map(e => {
+        return `<td>${e}</td>`;
+      });
+
+      let newe = document.createElement("tr");
+      newe.innerHTML = m;
+
+      if (em != "") {
+        if (em.includes("@") && (em.charAt(em.length - 4) == '.' || em.charAt(em.length - 3) == '.')) {
+          document.querySelector("table#val").appendChild(newe);
+          valMail.push(em);
+          valNo++;
+        } else {
+          document.querySelector("table#inval").appendChild(newe);
+          invalMail.push(em);
+          invalNo++;
+        }
+      }
+    });
+
+    document.querySelector("#valCount").innerHTML = valNo;
+    document.querySelector("#invalCount").innerHTML = invalNo;
+  };
+});
+function sendMail() {
+  // Get the necessary input values
+  var fromEmail = document.getElementById('mailid').value;
+  var subject = document.getElementById('subject').value;
+  var body = document.getElementById('body').value;
+
+  // Get all the valid email addresses
+  var validEmails = Array.from(document.querySelectorAll("#val td:first-child")).map(td => td.textContent);
+  for (var j = 0; j < validEmails.length; j++) {
+          var templateParams = {
+            to_name: validEmails[j],
+            from_name: fromEmail,
+            message_html: body,
+            subject_html: subject
+          };
+          
+          emailjs.send('service_sc6sucr', 'template_1aktux5', templateParams)
+            .then(function(response) {
+              console.log("SUCCESS", response);
+            }, function(error) {
+              console.log("FAILED", error);
+            });
+        }
+        alert("Emails sent to valid email addresses.");
+  // Send the email to each valid email address
+  validEmails.forEach(email => {
+    // Replace this code with your actual email sending implementation
+    console.log(`Sending email from ${fromEmail} to ${email}`);
+    console.log(`Subject: ${subject}`);
+    console.log(`Body: ${body}`);
+    console.log('---');
+  });
+}
+
+function reset() {
+  // Reset the input fields after sending the emails
+  document.getElementById('mailid').value = '';
+  document.getElementById('subject').value = '';
+  document.getElementById('body').value = '';
+}
+
+document.getElementById('sendButton').addEventListener('click', function() {
+  sendMail();
+  reset();
+});
+
+
+
+/*-----------Sending Emails--------------*/
+
+    </script>
+</body>
+</html>

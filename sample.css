@@ -1,0 +1,454 @@
+body{
+    scroll-behavior: smooth;
+    scroll-padding-bottom: 50px;
+    background-color:burlywood;
+    
+}
+strong{
+    font-size: 150px;
+}
+body{
+    background-image: url(intern.jpeg);
+    background-size:auto;
+    background-repeat: no-repeat;
+}
+#full{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    position: relative;
+    top: 130px;
+    position: relative;
+    top: 50px;
+}
+.qwerty{
+    border: 5px solid teal;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    animation-name: main;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    position: relative;
+    left: 150px;
+    color: azure;
+    padding: 5px;
+    margin-bottom: 69px;
+
+    
+}
+@keyframes main {
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+h2{
+    position: relative;
+    top: 5px;
+    text-align: center;
+}
+#composeButton{
+        width: fit-content;
+        height: fit-content;
+        font-size: 30px;
+        background-color:lightblue;
+        border-radius: 20px;
+        animation-name: com;
+        animation-duration: 1s;
+        animation-delay: 6s;
+        animation-fill-mode:both;
+        animation-iteration-count:1;
+        position: relative;
+        left: 300px;
+        bottom: 80px;  
+}
+
+@keyframes com {
+    0%{
+        transform: translatey(-500px);
+        opacity: 0;
+    }
+    25%{
+        transform: translatey(50px);
+        opacity: 0.8;
+    }
+    50%{
+        transform: translatey(0px);
+    }
+    100%{
+        transform: translatey(30px);
+    }
+}
+#composeBox{
+    border: 3px solid teal;
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+   
+   animation-name: box;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+   animation-iteration-count: 1;
+   color: azure;
+}
+@keyframes box{
+    0%{
+        transform: translateY(-500px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+h1 {
+    text-align: center;
+    font-size: 110px;
+    color: aliceblue;
+    text-decoration: solid;
+    position: relative;
+    top: 20px;
+    animation-name: typing, blinking;
+    animation-duration: 5s, 1s;
+    animation-timing-function: steps(40), linear;
+    animation-iteration-count: 1, infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    color: burlywood;
+    border: 6px solid whitesmoke;
+    border-radius: 15px;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 70px;
+      font-size: 70px; /* Adjust the font size for smaller screens */
+      white-space: normal; /* Allow text to wrap to the next line */
+      border-width: 2px; /* Adjust the border width as needed */
+      padding: 10px;
+      color:lightskyblue; /* Adjust the padding as needed */
+    }
+    .head{
+        flex-direction: column;
+    }
+  }
+  
+
+@keyframes typing {
+    0% { width: 0;border-radius: 50%; }
+    100% { width: 100%; 
+    font-size: 90px;
+    border: 3px solid whitesmoke;
+    border-radius:15px;}
+    
+}
+
+
+#hand{
+    font-size: 40px;
+    position: relative;
+    bottom:50px;
+    left:150px;
+    animation-name:hande;
+        animation-duration: 0.5s;
+        animation-delay: 1s;
+        animation-fill-mode:both;
+        animation-iteration-count:4;
+        animation-timing-function:ease-in;
+        animation: none;
+        
+    
+
+}
+@keyframes hande{
+    0%{
+        transform: translatey(0px);
+    }
+    50%{
+        transform: translatey(100px);
+        font-size: 130px;
+    }
+    100%{
+        transform: translatey(0px);
+        font-size: 100px;
+    }
+    
+}
+@media (max-width: 768px) {
+    #full {
+      flex-direction: column;
+      justify-content: center;
+        
+    }
+    #full .qwerty{
+        position: relative;
+        left: 50px;
+        top: 200px;
+        background-color:darksalmon;
+        color: black;
+    }
+    #composeButton{
+        position: relative;
+        bottom: 500px;
+        left: 180px;
+    }
+    #composeBox{
+        text-align: center;
+        margin: 10px;
+        padding: 5px;
+        color: black;
+        position: relative;
+        top: 80px;
+        left: 40px;
+        background-color:darksalmon;
+    }
+    #down .tables{
+        flex-direction: column-reverse;
+        justify-content: center;
+        position: relative;
+        top: 300px;
+        right: 800px;
+    }
+ 
+    
+  }img{
+    border-radius: 25px;
+    position: relative;
+    left: 60px;
+    top: 40px;
+    
+  }
+  input[type=text],input[type=email],textarea{
+    background-color: beige;
+    border-radius: 20px;
+    border: 2px solid darkolivegreen;
+    padding: 5px;
+  }
+  .tables{
+    position: relative;
+    right: 250px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px;
+    color: blueviolet;
+    
+    margin:380px;
+  }
+  th,td{
+    border: 1px solid rgb(24, 29, 25);
+    border-collapse: collapse;
+    border-radius: 10px;
+    text-align: center;
+    background-color: lavenderblush;
+    font-size: 20px;
+  }
+  .head{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    animation-name: head;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+    animation-fill-mode: forwards;
+  }
+  @keyframes head {
+    0%{
+        opacity: 0.01;
+    }
+    100%{
+        opacity: 1;
+    }
+  }
+  #hash{
+    
+    position: relative;
+    bottom: 130px;
+    background-size: 2000px;
+  }
+  #down{
+    display: flex;
+    flex-direction:row;
+    background-color: cadetblue;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 50%;
+    animation-name: circle;
+    animation-duration:6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  @keyframes circle {
+    0%{border-radius: 20%;
+
+    }
+    25%{border-radius: 30%;}
+    75%{border-radius: 50%;}
+    100%{border-radius: 20%;}
+  }
+  #val h2{
+    color: darkcyan;
+}
+#val td,th{
+    animation-name: lt;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+@keyframes lt {
+    0%{opacity: 0.2;
+    transform: translatex(300px);}
+    100%{opacity: 1;
+        transform: translatex(0px);}   
+}
+  #inval h2{
+    color: crimson;
+  }
+  #inval td,th{
+    animation-name: rt;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+@keyframes rt {
+    25%{opacity: 0.2;
+        transform: translatex(-300px);}
+    100%{opacity: 1;
+        transform: translatex(0px);}      
+}
+#down #shead{
+    background-color: antiquewhite;
+    height: fit-content;
+    animation-name: he;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode:both;
+    position: relative;
+    right: 44px;
+}
+@keyframes he {
+    0%{
+        color:rgb(103, 143, 175);
+    }           
+    30%{
+        color:rgb(90, 172, 74);
+    }           
+    60%{
+        color: darkcyan;
+    }           
+    100%{
+        color:green;
+    }           
+}
+/* Add a new media query for smaller screens */
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+
+    .head {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #image-container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    #image-container img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    #image-container h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #full {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .qwerty {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin-bottom: 20px;
+        background-color: darksalmon;
+        color: black;
+    }
+
+    #composeButton {
+        position: relative;
+        bottom: 20px;
+        left: auto;
+        margin-bottom: 20px;
+    }
+
+    #composeBox {
+        text-align: center;
+        margin: 10px;
+        padding: 5px;
+        color: black;
+        position: relative;
+        top: 20px;
+        left: auto;
+        background-color: darksalmon;
+    }
+
+    #down .tables {
+        flex-direction: column-reverse;
+        align-items: center;
+        position: static;
+        margin-top: 20px;
+        margin-right: 0;
+    }
+
+
+    #image-container h2 {
+        left: auto;
+    }
+}#mainp {
+    font-size: 20px; /* Default font size */
+}
+
+@media (max-width: 600px) {
+    /* Adjust font size for small screens */
+    #mainp {
+        font-size: 16px;
+    }strong{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    /* Adjust font size for medium screens */
+    #mainp {
+        font-size: 24px;
+    }strong{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1201px) {
+    /* Adjust font size for large screens */
+    #mainp {
+        font-size: 32px;
+    }strong{
+        font-size: 15px;
+    }
+}

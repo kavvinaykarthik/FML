@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="togglr.css">
+</head><style>.hidden {
+    display: none;
+  }
+  #upload {
+        display: none;
+      }
+
+      #upload-label {
+        
+        padding: 10px;
+        padding-left: 150px;
+        font-size: 20px;
+        background-color:cyan;
+        color:blueviolet;
+        cursor: pointer;
+        border-radius: 5px;
+        position: relative;
+        top: 100px;
+        display: flex;
+        justify-self:center;
+        text-align: center;
+      }
+
+      #file-name {
+        margin-top: 10px;
+      }
+      #image-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+      #image-container h2{
+        position: relative;
+        left: 100px;
+      }
+      @media (max-width: 768px) {
+  #image-container {
+    
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  #image-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    left: 140px;
+  }
+
+  #image-container h2 {
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    left: 140px;
+  }
+}
+  </style>
+<body>
+  <div class="head">
+  <div id="image-container">
+  <img src="icon.jpeg" alt="image" height="200px" width="200px">
+  <h2 style="font-size: 40px;color: aliceblue;">EXPOSYS <br> DATA LABS</h2>
+</div></div>
+  <h1 id="mainp"><strong style="font-size: 150px;">M</strong>ass - <strong>M</strong>ail <strong>D</strong>ispatcher</h1>
+<div id="full">
+    
+    <section class="qwerty"><br>
+        <label for="upload"><h2><span style="font-size: 50px;">Upload Your File Below</span><br> <sub>[In CSV Format]</sub></h2></label>
+        <input type="file" id="upload" class="me" accept="text/csv"  onchange="displayFileNameAndScroll(event)">
+        <label for="upload" id="upload-label">Choose File</label>
+        <span id="file-name" style="background-color: rgb(172, 215, 69);color: rgb(140, 20, 220);"></span><span id="hand">&#128071;</span></section>
+        <button id="composeButton">Compose Mail</button><br>
+    <div id="composeBox" class="hidden">
+        <form id="mass" reset();return false;">
+            <label for="mailid">From Email</label>
+          <input style="width: 300px;height: 30px;" type="email" id="mailid" placeholder="Enter Valid Email!!"><br>
+          <label for="subject">Subject</label>  
+          <input type="text" id="subject" placeholder="Subject" style="height: 30px;width: 300px;"><br>
+          <label for="body">Body</label>  
+          <textarea id="body" placeholder="Body" rows="10" cols="30" style="width: 300px;" autofocus></textarea>
+        <button onclick="sendEmail()" id="sendButton" style="font-size: 30px;border-radius: 10px;background-color:aliceblue;border-radius: 6px;">Send</button></form>
+    </div>
+</div></div>
+<section id="down"> <h2 id="shead" style="font-size: 100px;color: rgb(251, 249, 248);position: relative;top: 100px;">Emails After Validation</h2> <div id="hash">
+    <div class="tables" id="hash">
+      <div class="valTab">
+        <table id="val">
+          <tr>
+            <td>
+              <h2>Valid Mails: <span id="valCount"></span></h2>
+            </td>
+          </tr>
+        </table>
+      </div> 
+      <div class="invalTab">
+        <table id="inval">
+          <tr>
+            <td>
+              <h2>Invalid Mails: <span id="invalCount"></span></h2>
+           </td>
+          </tr>
+        </table>
+      </div>
+    </div></section>
+    
+    <script>
+
+
+
+      function displayAlert() {
+                  setTimeout(alert("Step-1 : UPLOAD THE DESIRED FILE.",2000))
+                  setTimeout(alert("Step-2 : VERIFY THE MAILS(Valid And Invalid).",2000))
+                  setTimeout(alert("Step-3 : Send The Mail To All The Valid Ones!",2000))
+        }
+        
+      document.getElementById('composeButton').addEventListener('click', function() {
+        toggleComposeBox();
+      });
+  
+      function toggleComposeBox() {
+        var composeBox = document.getElementById('composeBox');
+        composeBox.classList.toggle('hidden');
+        setTimeout(function() {
+                alert("Fill Up The Below E-mail Fields!");
+            }, 2000);
+        
+      }
+  
+      function displayFileNameAndScroll(event) {
+        let file = event.target.files[0];
+        let fileNameDisplay = document.getElementById('file-name');
+        fileNameDisplay.textContent = file ? file.name : '';
+  
+        // Scroll to the table
+        let tableElement = document.getElementById('shead');
+        tableElement.scrollIntoView({ behavior: 'smooth' });
+      }
+      setTimeout(function() {
+      // Replace 'elementId' with the ID of the element you want to scroll to
+  var element = document.getElementById('mainp');
+  
+     // Scroll to the element using smooth behavior
+  element.scrollIntoView({ behavior: 'smooth' });
+}, 3000);
+/* Email validation */
+let upload = document.getElementById('upload');
+
+upload.addEventListener('change', () => {
+  let fr = new FileReader();
+
+  fr.readAsText(upload.files[0]);
+
+  fr.onload = function() {
+    let a = fr.result.split(/\r?\n|\n/).map(e => {
+      return e.split(',');
+    });
+    let valNo = 0;
+    let invalNo = 0;
+    let valMail = [];
+    let invalMail = [];
+
+    a.forEach(e => {
+      let em = String(e);
+      let m = e.map(e => {
+        return `<td>${e}</td>`;
+      });
+
+      let newe = document.createElement("tr");
+      newe.innerHTML = m;
+
+      if (em != "") {
+        if (em.includes("@") && (em.charAt(em.length - 4) == '.' || em.charAt(em.length - 3) == '.')) {
+          document.querySelector("table#val").appendChild(newe);
+          valMail.push(em);
+          valNo++;
+        } else {
+          document.querySelector("table#inval").appendChild(newe);
+          invalMail.push(em);
+          invalNo++;
+        }
+      }
+    });
+
+    document.querySelector("#valCount").innerHTML = valNo;
+    document.querySelector("#invalCount").innerHTML = invalNo;
+  };
+});
+
+
+
+/*-----------Posting Emails--------------*/
+
+(function(){
+  emailjs.init("lgR2ig462WuyUPqgw"); // replace with your actual user ID
+})();
+function sendEmail(){
+  alert("Mails Sent!!");
+  for (var j = 0; j < valMail.length; j++) {
+    var templateParams = {
+      to_name: valMail[j],
+      from_name: document.getElementById("mailid").value,
+      message: document.getElementById("message").value,
+      subject : document.getElementById("body").value
+      
+    };
+    
+    emailjs.send("service_tgawlbo","template_j1t8w9h", templateParams,"lgR2ig462WuyUPqgw")
+      .then(function(response) {
+        console.log("SUCCESS", response);
+      }, function(error) {
+        console.log("FAILED", error);
+      });
+  }
+}
+    </script>
+</body>
+</html>

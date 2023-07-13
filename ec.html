@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Mail Dispatcher</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+</head>
+<style>
+    /* CSS styles specific to code snippet 2 */
+    .hidden {
+        display: none;
+    }
+  #upload {
+        display: none;
+      }
+
+      #upload-label {
+        
+        padding: 10px;
+        padding-left: 150px;
+        font-size: 20px;
+        background-color:cyan;
+        color:blueviolet;
+        cursor: pointer;
+        border-radius: 5px;
+        position: relative;
+        top: 100px;
+        display: flex;
+        justify-self:center;
+        text-align: center;
+      }
+
+      #file-name {
+        margin-top: 10px;
+      }
+      strong{
+    font-size: 150px;
+}
+body{
+    background-image: url(intern.jpeg);
+    background-size:auto;
+    background-repeat: no-repeat;
+}
+#full{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    position: relative;
+    top: 130px;
+    position: relative;
+    top: 50px;
+}
+.qwerty{
+    border: 5px solid teal;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    animation-name: main;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    position: relative;
+    left: 150px;
+    color: azure;
+    padding: 5px;
+
+    
+}
+@keyframes main {
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+h2{
+    position: relative;
+    top: 5px;
+    text-align: center;
+}
+#composeButton{
+        width: fit-content;
+        height: fit-content;
+        font-size: 30px;
+        background-color:lightblue;
+        border-radius: 20px;
+        animation-name: com;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode:both;
+        animation-iteration-count:1;
+        position: relative;
+        left: 300px;
+        bottom: 80px;  
+}
+
+@keyframes com {
+    0%{
+        transform: translatey(-500px);
+    }
+    25%{
+        transform: translatey(50px);
+    }
+    50%{
+        transform: translatey(0px);
+    }
+    100%{
+        transform: translatey(30px);
+    }
+}
+#composeBox{
+    border: 3px solid teal;
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+   
+   animation-name: box;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+   animation-iteration-count: 1;
+   color: azure;
+}
+@keyframes box{
+    0%{
+        transform: translateY(-500px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+h1{
+    text-align: center;
+    font-size: 90px;
+    color: aliceblue;
+    text-decoration:solid;
+    position: relative;
+    top: -5px;
+}
+#hand{
+    font-size: 40px;
+    position: relative;
+    bottom:50px;
+    left:150px;
+    animation-name:hande;
+        animation-duration: 0.5s;
+        animation-delay: 1s;
+        animation-fill-mode:both;
+        animation-iteration-count:4;
+        animation-timing-function:ease-in;
+        animation: none;
+        
+    
+
+}
+@keyframes hande{
+    0%{
+        transform: translatey(0px);
+    }
+    50%{
+        transform: translatey(100px);
+        font-size: 130px;
+    }
+    100%{
+        transform: translatey(0px);
+        font-size: 100px;
+    }
+    
+}
+@media (max-width: 768px) {
+    #full {
+      flex-direction: column;
+      justify-content: center;
+        flex-wrap: wrap;
+    }
+    .head{
+        flex-direction: column;
+    }
+  }img{
+    border-radius: 25px;
+    position: relative;
+    left: 150px;
+    
+  }
+  input[type=text],input[type=email],textarea{
+    background-color: beige;
+    border-radius: 20px;
+    border: 2px solid darkolivegreen;
+    padding: 5px;
+  }
+  .tables{
+    border: 2px solid greenyellow;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px;
+    color: blueviolet;
+   
+    margin:380px;
+  }
+  th,td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .head{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    animation-name: head;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+    animation-fill-mode: forwards;
+  }
+  @keyframes head {
+    0%{
+        opacity: 0.01;
+    }
+    100%{
+        opacity: 1;
+    }
+  }
+  #hash{
+    
+    position: relative;
+    bottom: 130px;
+    background-size: 2000px;
+  }
+  #shead{
+    background-image: linear-gradient(to right,skyblue,hotpink,green);
+  }
+    /* Add your custom styles here */
+</style>
+<body>
+    <div id="full">
+        <section class="qwerty">
+            <br>
+            <label for="upload">
+                <h2><span style="font-size: 50px;">Upload Your File Below</span><br> <sub>[In CSV Format]</sub></h2>
+            </label>
+            <input type="file" id="upload" accept="text/csv" onchange="displayFileNameAndScroll(event)">
+            <label for="upload" id="upload-label">Choose File</label>
+            <span id="file-name" style="background-color: rgb(172, 215, 69);color: rgb(140, 20, 220);"></span>
+            <span id="hand"></span>
+        </section>
+        <div class="qwerty" id="composeBox">
+            <h2>Compose Email</h2>
+            <form>
+                <label for="senderEmail">From:</label>
+                <input type="email" id="senderEmail" name="senderEmail" required>
+                <br><br>
+                <label for="subject">Subject:</label>
+                <textarea id="subject" name="subject" required></textarea>
+                <br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <br><br>
+                <input type="button" value="Send Emails" style="font-weight: bold;" onclick="sendEmails()">
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        
+        (function(){
+            emailjs.init("lgR2ig462WuyUPqgw"); // replace with your actual user ID
+        })();
+
+        function sendEmails() {
+            var senderEmail = document.getElementById("senderEmail").value;
+            var message = document.getElementById("message").value;
+            var subject = document.getElementById("subject").value;
+
+            var validEmails = [];
+            var invalidEmails = [];
+
+            // Read contents of CSV file
+            var file = document.getElementById("upload").files[0];
+            var reader = new FileReader();
+            reader.readAsText(file);
+            reader.onload = function(event) {
+                var csv = event.target.result;
+                var lines = csv.split("\n");
+
+                for (var i = 0; i < lines.length; i++) {
+                    var email = lines[i].trim();
+                    if (validateEmail(email)) {
+                        validEmails.push(email);
+                    } else {
+                        invalidEmails.push(email);
+                    }
+                }
+
+                if (validEmails.length > 0) {
+                    // Send emails using EmailJS
+                    for (var j = 0; j < validEmails.length; j++) {
+                        var emailParams = {
+                            from_email: senderEmail,
+                            to_email: validEmails[j],
+                            message_html: message,
+                            subject: subject
+                        };
+
+                        emailjs.send("default_service", "template_id", emailParams)
+                            .then(function(response) {
+                                console.log("Email sent:", response.status, response.text);
+                            }, function(error) {
+                                console.log("Error sending email:", error);
+                            });
+                    }
+
+                    // Show success message or perform other actions
+                    alert("Emails sent successfully!");
+                }
+
+                if (invalidEmails.length > 0) {
+                    // Handle invalid email addresses
+                    console.log("Invalid emails:", invalidEmails);
+                }
+            };
+
+            reader.onerror = function() {
+                console.log("Error reading file.");
+            };
+        }
+
+        function validateEmail(email) {
+            // Add your email validation logic here
+            return true;
+        }
+
+        function displayFileNameAndScroll(event) {
+            var fileName = event.target.value.split("\\").pop();
+            var fileNameElement = document.getElementById("file-name");
+            fileNameElement.textContent = "Selected File: " + fileName;
+            fileNameElement.classList.remove("hidden");
+
+            // Scroll to the file name element
+            fileNameElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>
